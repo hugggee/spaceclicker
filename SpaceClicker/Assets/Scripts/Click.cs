@@ -1,32 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Click : MonoBehaviour
 {
-    [SerializeField] public TMP_Text scoreText;
-    [SerializeField]  private int score = 0;
-  
+    public TMP_Text ClickText;
+    private int click;
 
-    public void OnButtonClick()
+    public void AddClick()
     {
-        score++;
-        UpdateScoreText();
+        click++;
+        ClickText.text = "Click: " + click;
     }
-
-    private void UpdateScoreText()
-    {
-        scoreText.text = "Score: " + score.ToString();
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

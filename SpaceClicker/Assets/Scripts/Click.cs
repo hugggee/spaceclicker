@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class Click : MonoBehaviour
 {
     public TMP_Text ClickText;

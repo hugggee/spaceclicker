@@ -5,28 +5,29 @@ using UnityEngine;
 
 public class Click : MonoBehaviour
 {
-    [SerializeField] public TMP_Text scoreText;
-    [SerializeField]  private int score = 0;
-  
+    public TMP_Text ClickText;         
+    private int click;                 
+    public HeartbeatEffect heartbeat;   
 
-    public void OnButtonClick()
-    {
-        score++;
-        UpdateScoreText();
-    }
-
-    private void UpdateScoreText()
-    {
-        scoreText.text = "Score: " + score.ToString();
-    }
     void Start()
     {
         
+        if (heartbeat == null)
+        {
+           
+            heartbeat = GameObject.Find("ClickingButton").GetComponent<HeartbeatEffect>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddClick()
     {
+        click++;
+        ClickText.text = "Click: " + click;
+
         
+        if (heartbeat != null)
+        {
+            heartbeat.StartHeartbeat();
+        }
     }
 }

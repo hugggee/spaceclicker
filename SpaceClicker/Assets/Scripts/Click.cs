@@ -52,3 +52,5 @@ public class Click : MonoBehaviour
 // gör nästa lektion,
 // bild meny alltså klicka på en knapp så kommer det ut, ska skrolla.
 // uppgradering, klickare fast den ger 3 klicks istället för 1 fast kostar 300 och ökar med 40%
+//POWERUPS
+//

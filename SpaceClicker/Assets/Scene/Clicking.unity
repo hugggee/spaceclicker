@@ -270,9 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b192f0b0d541740aea22f827eab6c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickText: {fileID: 1660092668}
   click: 0
   heartbeat: {fileID: 76165387}
+  clickText: {fileID: 1660092668}
 --- !u!114 &76165386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,9 +809,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b192f0b0d541740aea22f827eab6c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickText: {fileID: 1660092668}
   click: 0
   heartbeat: {fileID: 0}
+  clickText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

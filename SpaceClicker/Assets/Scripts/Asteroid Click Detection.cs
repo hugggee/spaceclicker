@@ -6,5 +6,7 @@ public class Asteroid : MonoBehaviour
     {
         FindObjectOfType<AsteroidSpawner>().OnAsteroidClicked();
         Destroy(gameObject); // Remove asteroid after it's clicked
+        Debug.Log("When Clicked on Asteriod");
     }
+   
 }

@@ -44,7 +44,7 @@ public class Click : MonoBehaviour
     {
         if (clickText != null)
         {
-            clickText.text = "Click: " + click;
+            clickText.text = "" + click;
         }
     }
 }

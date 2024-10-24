@@ -6,6 +6,7 @@ using UnityEngine;
 public class Click : MonoBehaviour
 {
     [SerializeField] private int click;
+    [SerializeField] private int progression;
     public HeartbeatEffect heartbeat;
     public TMP_Text clickText;
     void Start()
@@ -20,6 +21,7 @@ public class Click : MonoBehaviour
     public void AddClick()
     {
         click++;
+        progression++;
 
         UpdateClickText();
 
@@ -39,6 +41,9 @@ public class Click : MonoBehaviour
     {
         return click;
     }
+    
+    public int GetProgression()
+    { return progression; }
 
     public void UpdateClickText()
     {

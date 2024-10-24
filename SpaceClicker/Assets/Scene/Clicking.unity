@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 76165385}
   - component: {fileID: 76165386}
   - component: {fileID: 76165387}
+  - component: {fileID: 76165388}
   m_Layer: 5
   m_Name: ClickingButton
   m_TagString: Untagged
@@ -404,6 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: 0
+  progression: 0
   heartbeat: {fileID: 0}
   clickText: {fileID: 1660092668}
 --- !u!114 &76165386
@@ -454,6 +456,25 @@ MonoBehaviour:
   originalScale: {x: 0, y: 0, z: 0}
   isHeartbeatActive: 1
   heartbeatTime: 1
+--- !u!114 &76165388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76165380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda3d280333040049bc06a4e3908e322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressionScript: {fileID: 76165385}
+  spaceSprites:
+  - {fileID: 21300000, guid: a7687fff6bafe6b4fb5dfefa6443e1be, type: 3}
+  - {fileID: 21300000, guid: db13cb0eb9af36b4ebd49ef257590434, type: 3}
+  - {fileID: 21300000, guid: 0452d7af11b0a3249913f51d19db4958, type: 3}
+  - {fileID: 21300000, guid: 4c7501d5cdba08145999b2ed4e36be07, type: 3}
+  - {fileID: 21300000, guid: 368318f41d04e73429cef0b5948875e7, type: 3}
 --- !u!1 &175572685
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoClickerPriceText: {fileID: 1944326127}
+  autoClickerPrefab: {fileID: 4079810601717532154, guid: 4696693c83d656b4885eafd50be6889b, type: 3}
+  cookieRectTransform: {fileID: 76165381}
 --- !u!1 &936846492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: 0
+  progression: 0
   heartbeat: {fileID: 0}
   clickText: {fileID: 0}
 --- !u!1 &1736203076
@@ -1382,9 +1406,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -707.83777, y: -73.90906}
+  m_AnchoredPosition: {x: -505.92285, y: 9.979004}
   m_SizeDelta: {x: 504.323, y: 932.09}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1.9, y: 0.59}
 --- !u!114 &1838021444
 MonoBehaviour:
   m_ObjectHideFlags: 0

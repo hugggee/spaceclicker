@@ -88,5 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75d30ee331924f44ac48602a0b3d54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 300
+  radius: 340
   period: 4

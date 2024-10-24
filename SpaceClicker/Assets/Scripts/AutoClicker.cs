@@ -7,9 +7,11 @@ public class AutoClicker : MonoBehaviour
     private Click clickScript;
     private int upgradeCost = 50;
     private int upgradeCount = 0;
-    private float increasePercentage = 0.20f;
+    private float increasePercentage = 0.15f;
 
     public TMP_Text autoClickerPriceText;
+    public GameObject autoClickerPrefab;
+    public RectTransform cookieRectTransform;
 
     void Start()
     {
@@ -32,6 +34,7 @@ public class AutoClicker : MonoBehaviour
             upgradeCost = (int)(upgradeCost * (1 + increasePercentage));
             UpdateAutoClickerPriceText();
             StartCoroutine(AutoClickCoroutine());
+            SpawnAutoClickerObject();
         }
     }
 
@@ -52,4 +55,18 @@ public class AutoClicker : MonoBehaviour
             autoClickerPriceText.text = "Autoclicker: " + upgradeCost;
         }
     }
+
+    private void SpawnAutoClickerObject()
+    {
+        GameObject newAutoClicker = Instantiate(autoClickerPrefab, cookieRectTransform.parent);
+        RectTransform newRectTransform = newAutoClicker.GetComponent<RectTransform>();
+        newRectTransform.anchoredPosition = cookieRectTransform.anchoredPosition;
+        OscillatorUI oscillator = newAutoClicker.GetComponent<OscillatorUI>();
+        if (oscillator != null)
+        {
+            float uniqueOffsetAngle = (upgradeCount - 1) * (Mathf.PI / 4);
+            oscillator.Initialize(uniqueOffsetAngle);
+        }
+    }
+
 }
